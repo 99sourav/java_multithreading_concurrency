@@ -31,7 +31,7 @@ public class ExecutorInvokeAllMain {
                 System.out.println("result " + futureObj.get());
             }
         } catch (CancellationException | InterruptedException | ExecutionException e) {
-            System.out.println("error to execute task " + e);
+            System.out.println("error to execute task " + e.getMessage());
         }
     }
 }

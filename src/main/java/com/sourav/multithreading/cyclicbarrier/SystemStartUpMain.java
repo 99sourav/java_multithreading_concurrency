@@ -37,13 +37,13 @@ class SubSystem implements Runnable{
         try {
             Thread.sleep(initializationTime); // average time taken for initialize
         } catch (InterruptedException e) {
-            System.out.println("error to block the current thread for specific time " + e);
+            System.out.println("error to block the current thread for specific time " + e.getMessage());
         }
         System.out.println(nameOfSystem + " initialization completed");
         try {
             cyclicBarrier.await();
         } catch (InterruptedException | BrokenBarrierException e) {
-            e.printStackTrace();
+            System.out.println("Error :{} " + e.getMessage());
         }
     }
 }

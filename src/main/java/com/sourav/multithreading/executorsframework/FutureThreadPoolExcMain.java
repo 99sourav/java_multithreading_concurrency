@@ -20,18 +20,18 @@ public class FutureThreadPoolExcMain {
         try {
             futureObj.get(3000, TimeUnit.MILLISECONDS);
         } catch (TimeoutException e) {
-            System.out.println("TimeoutException " + e);
+            System.out.println("TimeoutException " + e.getMessage());
         } catch (ExecutionException e) {
-            System.out.println("ExecutionException " + e);
+            System.out.println("ExecutionException " + e.getMessage());
         } catch (InterruptedException e) {
-            System.out.println("InterruptedException " + e);
+            System.out.println("InterruptedException " + e.getMessage());
         }
         try {
             futureObj.get();
         } catch (ExecutionException e) {
-            System.out.println("ExecutionException " + e);
+            System.out.println("ExecutionException " + e.getMessage());
         } catch (InterruptedException e) {
-            System.out.println("InterruptedException " + e);
+            System.out.println("InterruptedException " + e.getMessage());
         }
         System.out.println("Task Completed " + futureObj.isDone());
         System.out.println("is Cancelled " + futureObj.isCancelled());

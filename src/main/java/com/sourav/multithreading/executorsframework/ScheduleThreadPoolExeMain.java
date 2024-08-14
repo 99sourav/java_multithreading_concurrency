@@ -13,7 +13,7 @@ public class ScheduleThreadPoolExeMain {
         try {
             System.out.println(stringFuture.get());
         } catch (InterruptedException | ExecutionException e) {
-            System.out.println("exception occurred " + e);
+            System.out.println("exception occurred " + e.getMessage());
         }
     }
 }

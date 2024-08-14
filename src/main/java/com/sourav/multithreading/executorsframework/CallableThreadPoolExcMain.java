@@ -17,7 +17,7 @@ public class CallableThreadPoolExcMain {
             try {
                 Thread.sleep(10000);
             } catch (InterruptedException e) {
-                System.out.println("InterruptedException " + e);
+                System.out.println("Error :{} " + e.getMessage());
             }
             System.out.println("Task processing " + Thread.currentThread().getName());
             return integerList;
@@ -28,19 +28,19 @@ public class CallableThreadPoolExcMain {
         try {
             callableObj.get(3000, TimeUnit.MILLISECONDS);
         } catch (TimeoutException e) {
-            System.out.println("TimeoutException " + e);
+            System.out.println("TimeoutException " + e.getMessage());
         } catch (ExecutionException e) {
-            System.out.println("ExecutionException " + e);
+            System.out.println("ExecutionException " + e.getMessage());
         } catch (InterruptedException e) {
-            System.out.println("InterruptedException " + e);
+            System.out.println("InterruptedException " + e.getMessage());
         }
         try {
             List<Integer> result = callableObj.get();
             System.out.println("result " + Arrays.asList(result).get(0));
         } catch (ExecutionException e) {
-            System.out.println("ExecutionException " + e);
+            System.out.println("ExecutionException " + e.getMessage());
         } catch (InterruptedException e) {
-            System.out.println("InterruptedException " + e);
+            System.out.println("InterruptedException " + e.getMessage());
         }
         System.out.println("Task Completed " + callableObj.isDone());
         System.out.println("is Cancelled " + callableObj.isCancelled());

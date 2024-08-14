@@ -25,7 +25,7 @@ public class ExecutorServiceMain {
                 System.out.println("All tasks completed within the timeout.");
             }
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error :{} " + e.getMessage());
         }
         System.out.println("total time " + (System.currentTimeMillis()-startTime));
     }

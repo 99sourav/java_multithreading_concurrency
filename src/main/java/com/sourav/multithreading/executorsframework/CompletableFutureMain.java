@@ -16,7 +16,7 @@ public class CompletableFutureMain {
             try {
                 Thread.sleep(10000);
             } catch (InterruptedException e) {
-                System.out.println("InterruptedException " + e);
+                System.out.println("Error :{} " + e.getMessage());
             }
             System.out.println("Task processing " + Thread.currentThread().getName());
             return integerList;
@@ -24,9 +24,9 @@ public class CompletableFutureMain {
         try {
             System.out.println("result " + asyncTaskObj.get());
         } catch (ExecutionException e) {
-            System.out.println("ExecutionException " + e);
+            System.out.println("ExecutionException " + e.getMessage());
         } catch (InterruptedException e) {
-            System.out.println("InterruptedException " + e);
+            System.out.println("InterruptedException " + e.getMessage());
         }
     }
 }

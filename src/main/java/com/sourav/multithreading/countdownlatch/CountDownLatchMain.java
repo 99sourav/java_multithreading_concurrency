@@ -15,7 +15,7 @@ public class CountDownLatchMain {
         try {
             countDownLatch.await();
         } catch (InterruptedException e) {
-            System.out.println("error to block the main thread " + e);
+            System.out.println("Error :{} " + e.getMessage());
         }
         System.out.println(Thread.currentThread().getName() + " Thread Finished");
     }

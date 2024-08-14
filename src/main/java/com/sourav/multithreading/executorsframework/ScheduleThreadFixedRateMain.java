@@ -21,7 +21,7 @@ public class ScheduleThreadFixedRateMain {
         try {
             Thread.sleep(9000);
         } catch (InterruptedException e) {
-            System.out.println("error to execute " + e);
+            System.out.println("error to execute " + e.getMessage());
         }
         futureSchObj.cancel(true);
         scheduledExecutorService.shutdown();
