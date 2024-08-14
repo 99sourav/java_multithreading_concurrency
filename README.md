@@ -1,6 +1,9 @@
-Java Multithreading & Concurrency
+# Java Multithreading & Concurrency
+
 Welcome to the Java Multithreading & Concurrency repository! This repository is designed to help developers understand and implement multithreading and concurrency concepts in Java.
+
 Table of Contents
+
 Introduction
 Getting Started
 Examples
@@ -8,7 +11,9 @@ Best Practices
 Resources
 Contributing
 License
+
 Introduction
+
 Multithreading and concurrency are essential topics in modern software development. This repository provides practical examples, tutorials, and best practices for managing threads, synchronizing tasks, and optimizing concurrent code in Java.
 
 Getting Started
