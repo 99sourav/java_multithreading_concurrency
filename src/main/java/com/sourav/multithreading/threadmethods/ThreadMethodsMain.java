@@ -2,7 +2,7 @@ package com.sourav.multithreading.threadmethods;
 import com.sourav.multithreading.threadcreation.MultiThread1;
 import com.sourav.multithreading.threadcreation.MultiThread2;
 
-public class ThreadMethods {
+public class ThreadMethodsMain {
     public static void main(String[] args) {
         MultiThread1 multiThread1 = new MultiThread1("MultiThread1");
         multiThread1.setPriority(Thread.MIN_PRIORITY);
@@ -15,12 +15,12 @@ public class ThreadMethods {
         try {
             thread.join(); // after multiThread2 will finish it's work, then only main thread will run
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error :{} " + e.getMessage());
         }
         try {
             Thread.sleep(5000); // thread wait for specific period of time and come back to runnable state
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error :{} " + e.getMessage());
         }
         MultiThread3 multiThread3 = new MultiThread3();
         Thread thread1 = new Thread(multiThread3, "MultiThread3"); // user threads , The JVM will continue running until this thread finishes its task
@@ -33,7 +33,7 @@ public class ThreadMethods {
         try {
             Thread.sleep(3000); // thread wait for specific period of time and come back to runnable state
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error :{} " + e.getMessage());
         }
         System.out.println("execution finished by thread name " + Thread.currentThread().getName());
     }

@@ -26,7 +26,7 @@ public class ReadWriteCounterMain {
             writeThread.join();
             readThread1.join();
         } catch (InterruptedException e) {
-            System.out.println("InterruptedException " + e);
+            System.out.println("Error :{} " + e.getMessage());
         }
         System.out.println("finished main thread with count " + readWriteCounter.getCount());
     }

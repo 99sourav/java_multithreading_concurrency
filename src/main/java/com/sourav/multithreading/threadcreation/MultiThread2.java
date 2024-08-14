@@ -11,7 +11,7 @@ public class MultiThread2 implements Runnable{
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
-            System.out.println(Thread.currentThread().getName() + " interrupted " + e);
+            Thread.currentThread().interrupt();
         }
     }
 }

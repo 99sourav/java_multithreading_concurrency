@@ -12,7 +12,7 @@ public class ReentrantOuterInner {
             System.out.println("outer method");
             innerMethod();
         }catch (Exception e){
-            System.out.println("exception occured " + e);
+            System.out.println("Error :{} " + e.getMessage());
         }finally {
             lock.unlock();
         }
@@ -23,7 +23,7 @@ public class ReentrantOuterInner {
             lock.lock();
             System.out.println("inner method");
         }catch (Exception e){
-            System.out.println("exception occured " + e);
+            System.out.println("Error :{} " + e.getMessage());
         }finally {
             lock.unlock();
         }

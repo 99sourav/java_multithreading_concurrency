@@ -3,7 +3,7 @@ package com.sourav.multithreading.locks;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class InterruptibleLockExample {
+public class InterruptibleLock {
     private final Lock lock = new ReentrantLock();
 
     public void performTask() {

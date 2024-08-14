@@ -14,7 +14,7 @@ public class MultiThread1 extends Thread{
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
-            System.out.println(Thread.currentThread().getName() + " interrupted " + e);
+            Thread.currentThread().interrupt();
         }
     }
 }

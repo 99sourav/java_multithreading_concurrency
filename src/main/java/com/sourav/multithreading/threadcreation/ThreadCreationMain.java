@@ -1,6 +1,6 @@
 package com.sourav.multithreading.threadcreation;
 
-public class ThreadCreation {
+public class ThreadCreationMain {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("execution started by thread name " + Thread.currentThread().getName());
         // create an instance or object of custom thread class

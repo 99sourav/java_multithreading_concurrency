@@ -22,4 +22,28 @@ public class DeadLockMain {
     }
 }
 
+// DeadLock Implementation
+class Pen {
+    public synchronized void writeWithPenAndPaper(Paper paper){
+        System.out.println(Thread.currentThread().getName() + " using pen obj " + this + " trying to acquire paper obj " + paper);
+        paper.finishWriting();
+    }
+
+    public synchronized void finishWriting(){
+        System.out.println(Thread.currentThread().getName() + " finished writing with pen " + this);
+    }
+}
+
+class Paper {
+    public synchronized void writeWithPaperAndPen(Pen pen){
+        System.out.println(Thread.currentThread().getName() + " using paper obj " + this + " trying to acquire pen obj " + pen);
+        pen.finishWriting();
+    }
+
+    public synchronized void finishWriting() {
+        System.out.println(Thread.currentThread().getName() + " finished writing with paper " + this);
+    }
+}
+
+
 
